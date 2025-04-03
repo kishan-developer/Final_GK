@@ -14,6 +14,13 @@ app.use(express.json()); // it helps to console req.body data in console
 // setting the port usign env file using dotenc package
 const port = process.env.PORT || 5001;
 
+
+
+// Welcome route
+app.get("/", (req, res) => {
+    res.send("Welcome to the Backend Server!");
+});
+
 // all student authentication
 app.use("/api/service", require("./Routes/ServiceRoutes"));
 
