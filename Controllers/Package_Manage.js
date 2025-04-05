@@ -7,7 +7,7 @@ const Package_Model = require("../Models/Package_Model");
 const createPackage = asyncHandler(async(req, res)=> {
     const { title, ImageUrl, content, days, destination } = req.body;
 
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
 
     const PackageData = await Package_Model.create(req.body)
 
