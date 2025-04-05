@@ -7,10 +7,10 @@ router.get("/all", getAllBlogPost);
 
 router.get("/:_id", getOnePost);
 
-router.put("/:_id", updateBlogPost);
+router.put("/:_id",validateToken, updateBlogPost);
 
-router.delete("/:_id", deleteBlogPost)
+router.delete("/:_id",validateToken, deleteBlogPost)
 
-router.post("/create", createBlogPost)
+router.post("/create",validateToken, createBlogPost)
 
 module.exports = router;
