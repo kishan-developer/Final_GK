@@ -8,7 +8,7 @@ const serviceModel = require("../Models/ServiceModel");
 const createService = asyncHandler(async(req, res)=> {
     const { title, ImageUrl, content } = req.body;
 
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
 
     const serviceData = await serviceModel.create(req.body)
 
@@ -64,7 +64,7 @@ const getoneservice = asyncHandler(async (req, res) => {
 // update one user details
 const updateservice = asyncHandler(async (req, res) => {
     const { _id } = req.params;
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
     const {  title, ImageUrl, content } = req.body;
 
     if (!_id) {
