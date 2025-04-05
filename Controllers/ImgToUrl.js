@@ -64,7 +64,7 @@ const uploadfile = asyncHandler(async(req, res) => {
 const getImgFiletoUrl = asyncHandler(async(req, res)=> {
     const { title, ImageUrl, content } = req.body;
 
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
 
     const serviceData = await serviceModel.create(req.body)
 
