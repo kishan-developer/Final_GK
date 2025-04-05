@@ -45,7 +45,7 @@ const getOnePost = asyncHandler(async (req, res) => {
 // update one user details
 const updateBlogPost = asyncHandler(async (req, res) => {
     const { _id } = req.params;
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
     const {  title, ImageUrl, content } = req.body;
 
     if (!_id) {
@@ -101,7 +101,7 @@ const deleteBlogPost = asyncHandler(async (req, res) => {
 })
 
 const getAllBlogPost = asyncHandler(async(req, res)=> {
-    console.log("blogs")
+    // console.log("blogs")
 
     const blogs = await BlogModel.find();
 
