@@ -7,7 +7,10 @@ const connectDb = require("./Config/DbController");
 connectDb();
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: "https://ghoomokashi.com", // frontend
+}));
 app.use('/uploads', express.static("uploads"))
 app.use(express.json()); // it helps to console req.body data in console 
 
